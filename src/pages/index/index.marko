@@ -1,0 +1,27 @@
+
+style {
+    .grey-head {
+        color: grey;
+    }
+
+    .body-text {
+        color: brown;
+    } 
+}
+
+class {
+  onCreate() {
+    this.state = {
+      author: ''
+    }
+  }
+  changeAuthor(e) {
+      this.state.author = e.target.value
+  }
+}
+
+<div>
+    <h1 class="grey-head">Hello world from ${state.author || 'me'}!</h1>
+    <p class="body-text">This is my first Marko application</p>
+    <input type="text" on-input("changeAuthor") value=state.author/>
+</div>
